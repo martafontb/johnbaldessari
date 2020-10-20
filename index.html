@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="Marta Font">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>John Baldessari</title>
+		<meta name="description" content="An experimental representation of John Baldessari's work, using face recognition. developed by: Marta Font" />
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" value="summary">
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Go West" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content="An experimental representation of John Baldessari's work, using face recognition. developed by: Marta Font" />
+		<link rel="shortcut icon" href="dots/surprised0.png"/>
+		<link rel="stylesheet" href="_base.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script
+	  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  	integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  	crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="js/face-api.min.js"></script>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<script type="text/javascript" src="js/burning-words.min.js"></script>
+		<script type="text/javascript" src="js/scrollspy.min.js"></script>
+
+
+	</head>
+	<body>
+
+<div class="progress"></div>
+<!-- <div class="pixels"></div> -->
+
+
+<nav id="nav">
+	<ul>
+	<li class="active"> <a href="#page1"> Goya Series</a></li>
+	<li> <a href="#page2"> The Cremation Project</a></li>
+	<li> <a href="#page3"> Prima Facie</a></li>
+	</ul>
+</nav>
+
+<script>
+$("#nav").scrollspy({ offset: -75 });
+</script>
+
+		<div class="container">
+		<header>
+		  <img src="green-red.jpg" />
+		  <h1>
+		    John <span><svg width="153" height="153" viewBox="0 0 153 153" fill="none"><circle cx="76.0395" cy="76.0535" r="75" transform="rotate(90.7794 76.0395 76.0535)"/></svg></span> Baldessari
+		  </h1>
+		  <img src="arrow.svg" class="arrow"/>
+		</header>
+		</div>
+
+		<section class="about">
+		  <figure>
+		    <img
+		      src="baldessari-1.png"
+					loading="lazy"
+					alt="John Baldessari"
+		    />
+		  </figure>
+			<h2 class="about-text">
+			 John Baldessari was a towering figure in conceptual art.
+			 Literally he was a towering figure of 6ft 7in to be precise.<br>
+			 He was also incredibly important.
+		 </h2>
+		</section>
+
+
+		<section class="object" id="page1">
+			<figure>
+				<img src="scissors.png" loading="lazy"class="no-filter">
+			</figure>
+			<h2 class="about-text">John Baldessari (1931) Goya Series: </h2>
+		 </section>
+
+		 <section class="object">
+			 <figure>
+				<img src="time.png" loading="lazy"class="no-filter">
+				</figure>
+		 </section>
+
+		 <section class="object">
+			 <figure>
+				 <img src="use.jpg" loading="lazy" class="no-filter">
+				</figure>
+			</section>
+
+			<marquee id="page2" height="65px" loop="infinite" scrollamount="12" width="100%"><script type="text/javascript">
+				BurningWords("THE CREMATION PROJECT ", {
+					 "text_color" : "FFFFCC",
+					 "font" : "Times New Roman",
+					 "font_size" : 62,
+					 "bg_alpha" : 100,
+					 "speed" : "normal"
+				});
+				</script></marquee>
+
+		<section class="project" >
+		  <figure>
+		    <img
+		      src="cremation-2.png"
+					loading="lazy"
+					alt="John Baldessari - The Cremation Project 1970"
+		    />
+		    <figcaption class="text">
+					In 1970 Baldessari burnt all of the paintings he had created
+					between 1953 and 1966 as part of a new piece,
+					titled 'The Cremation Project'
+		    </figcaption>
+		  </figure>
+		</section>
+
+		<section class="project-2">
+		  <figure>
+		    <img
+		      src="cremation.jpg"
+		      loading="lazy"
+					alt="Cookies The Cremation Project 1970"
+		    />
+		    <figcaption class="text">
+					The ashes from these paintings were baked into cookies and placed into an urn,
+					and the resulting art installation consists of a bronze plaque with the destroyed paintings'
+					birth and death dates, as well as the recipe for making the cookies.
+		    </figcaption>
+		  </figure>
+		</section>
+
+
+
+		<section class="prima" id="page3">
+
+			<input type="button" value="Start" onclick="setupCameraInput()" id="showVideo">
+			<input  type="button" value="Stop" onclick="stopVideo()" id="stopVideo">
+
+			<div class="container">
+			  <div id="video-container">
+			    <video id="camera-stream" autoplay sinline></video>
+			    <div id="camera-denied">
+			      Access to your camera was denied, please enable to experience John Baldessari in augmented
+			      reality, or just play with the rest of the information on the site.
+			    </div>
+			    <canvas id="overlay"></canvas>
+			  </div>
+
+		<h1 class="prima-facie">PRIMA FACIE</h1>
+			  <span id="mood-detection">
+			    <h3>mood detection</h3>
+			    <label class="switch">
+			      <input onclick="toggleMoodDetectionMode()" type="checkbox" />
+			      <span class="slider round"></span>
+			    </label>
+
+
+			  </span>
+
+			  <!-- info box  -->
+			  <p class="explainer">?</p>
+			  <div class="explanation d-none">
+			    <p class="info">
+			      Baldessari discovered that obscuring the face lent anonymity to his subjects and encouraged
+			      the viewer to focus on other aspects of the images.
+			      <br /><br />
+			      This site was developed by
+			      <a href="http://anappleaday.me/index.html/" target="_blank" class="info"> Marta Font</a>
+			      as an experimental representation of John Baldessari's work, it uses the JavaScript face
+			      recognition API
+			      <a href="https://github.com/justadudewhohacks/face-api.js" target="_blank" class="info">
+			        ace-api.js
+			      </a>
+			      <br /><br />
+			      CONNECT YOUR CAMERA - please give us access to your camera to use the face detection API
+			      <br /><br />
+			      A regular cleanup is automated every 15 min on the database.
+			      <br /><br />
+			      NOTE: the API doesn't work on mobile: please visit this app from a larger screen.
+			    </p>
+			  </div>
+			</div>
+		</section>
+
+		<section class="colours">
+		<figure>
+				<img
+					src="prima-facie.jpg"
+					loading="lazy"
+					class="no-filter"
+					alt="PRIMA FACIE"
+				/>
+		</section>
+
+		<footer>
+			<p>
+					academic rich media project for EINA <br>
+					<script type="text/javascript">
+						BurningWords("Marta Font", {
+							 "text_color" : "FFFFCC",
+							 "font" : "Arial",
+							 "font_size" : 24,
+							 "speed" : "normal"
+						});
+						</script> ©2020
+			</p>
+		</footer>
+
+		<svg class="blobs" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+		   <g class="blob">
+		     <g transform="translate(1100, 1100)">
+				 <path d="M1994 164.283C1994 1368.19 309.434 2006 -409.192 2006C-1127.82 2006 -1994 1107.72 -1994 268.006C-1994 -571.704 -1140.97 -3048.89 -138.562 -1816.57C787.753 -564.765 1994 -1657.48 1994 164.283Z" fill="#FED8CC"/>
+		     </g>
+		     <g transform="translate(-100, -100)">
+		     <path d="M1994 164.283C1994 1368.19 309.434 2006 -409.192 2006C-1127.82 2006 -1994 1107.72 -1994 268.006C-1994 -571.704 -1140.97 -3048.89 -138.562 -1816.57C787.753 -564.765 1994 -1657.48 1994 164.283Z" fill="#FED8CC"/>
+		      </g>
+		    </g>
+		 <g transform="translate(-100, -100)" class="blob">
+		  <path d="M2887 949.593C2887 1666.16 2212.8 2398 1458.16 2398C703.529 2398 -898 1819.36 -898 730.806C-898 -357.744 -345.39 -506 1520.62 -506C2275.25 -506 2887 233.029 2887 949.593Z" fill="#FE9856"/>
+		   </g>
+		     <g transform="translate(1100, 1100)" class="blob">
+		     <path d="M1994 164.283C1994 1368.19 309.434 2006 -409.192 2006C-1127.82 2006 -1994 1107.72 -1994 268.006C-1994 -571.704 -1140.97 -3048.89 -138.562 -1816.57C787.753 -564.765 1994 -1657.48 1994 164.283Z" fill="#CEEDDD"/>
+		    </g>
+
+		 <g transform="translate(-100, -100)" class="blob">
+		  <path d="M2887 949.593C2887 1666.16 2212.8 2398 1458.16 2398C703.529 2398 -898 1819.36 -898 730.806C-898 -357.744 -345.39 -506 1520.62 -506C2275.25 -506 2887 233.029 2887 949.593Z" fill="#FFF"/>
+		</g>
+		</svg>
+
+
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
