@@ -79,6 +79,7 @@ h1 {
   max-width: 900px;
   font-style: italic;
   text-transform: uppercase;
+font-weight: 200;
   animation: header-in 0.4s 1s both cubic-bezier(0.45,0.05,0.55,0.95);
 }
 
@@ -87,6 +88,7 @@ h2 {
   /* text-align: center;
   position: absolute; */
   animation: header-in 0.4s 1.5s both ;
+font-weight: 200;
 }
 
 h3 {
